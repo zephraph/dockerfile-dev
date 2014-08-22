@@ -9,11 +9,12 @@ FROM dockerfile/python
 
 MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
+# Install vim and tmux
 RUN sudo apt-get install -y vim
 RUN sudo apt-get install -y tmux
 
-ADD ./.vimrc /root
-ADD ./.tmux.conf /root
+# Copy over config files
+ADD ./config /data
 
 # Setup vundle
 RUN mkdir ~/.vim/bundle
