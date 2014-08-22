@@ -17,7 +17,7 @@ RUN sudo apt-get install -y tmux
 ADD ./config /data
 
 # Setup vundle
-RUN mkdir ~/.vim/bundle
+RUN mkdir -p ~/.vim/bundle
 RUN sudo apt-get install -y git curl
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall
