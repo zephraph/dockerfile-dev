@@ -7,11 +7,13 @@
 # Include base image
 FROM dockerfile/python
 
+MAINTAINER Justin Bennett <jtbnnt@gmail.com>
+
 RUN sudo apt-get install -y vim
 RUN sudo apt-get install -y tmux
 
-ADD .vimrc
-ADD .tmux.conf
+ADD .vimrc /root
+ADD .tmux.conf /root
 
 # Setup vundle
 RUN mkdir ~/.vim/bundle
