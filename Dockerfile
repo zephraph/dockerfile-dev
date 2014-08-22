@@ -12,8 +12,8 @@ MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 RUN sudo apt-get install -y vim
 RUN sudo apt-get install -y tmux
 
-ADD .vimrc /root
-ADD .tmux.conf /root
+ADD ./.vimrc /root
+ADD ./.tmux.conf /root
 
 # Setup vundle
 RUN mkdir ~/.vim/bundle
