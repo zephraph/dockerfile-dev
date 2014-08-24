@@ -26,3 +26,6 @@ RUN mkdir -p ~/.vim/bundle
 RUN sudo apt-get install -y git curl
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall
+
+# Set the default command
+CMD ["tmux"]
