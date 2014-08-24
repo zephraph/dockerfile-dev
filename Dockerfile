@@ -11,7 +11,7 @@ MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
 # Copy over useful files
 ADD ./config /root
-ADD ./scripts /root
+ADD ./scripts /root/scripts
 
 # Install tmux
 ENV TMUX_MAJOR_VERSION 1.9
