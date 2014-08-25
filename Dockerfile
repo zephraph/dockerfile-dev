@@ -29,3 +29,6 @@ RUN vim +PluginInstall +qall
 
 # Set the default command
 CMD ["tmux"]
+
+# Setup volume
+VOLUME ["~/:/data"]
