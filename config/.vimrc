@@ -27,3 +27,6 @@ set expandtab
 autocmd Filetype xml setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffeescript setlocal ts=2 sts=2 sw=2
+
+map fj <Esc>
+map! fj <Esc>
