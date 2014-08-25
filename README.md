@@ -15,3 +15,7 @@ This dockerfile is my personal developement setup
 ### Usage
 
     docker run -it --rm zephraph/dev
+
+I generally like to map the /data volume to my host's home directory so it persists across runs. 
+
+    docker run -it --rm -v ~/:/data zephraph/dev
