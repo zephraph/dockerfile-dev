@@ -27,5 +27,9 @@ RUN sudo apt-get install -y git curl
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall
 
+# Configure terminal colors
+printf '\n# Set terminal color to 256'
+printf 'export TERM=xterm-256color' > ~/.bashrc
+
 # Set the default command
 CMD ["tmux"]
