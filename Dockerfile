@@ -30,6 +30,7 @@ RUN vim +PluginInstall +qall
 # Configure terminal colors
 printf '\n# Set terminal color to 256'
 printf 'export TERM=xterm-256color' > ~/.bashrc
+printf 'alias tmux=\'tmux -2\''
 
 # Set the default command
 CMD ["tmux"]
