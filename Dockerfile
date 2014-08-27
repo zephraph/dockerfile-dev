@@ -9,6 +9,10 @@ FROM dockerfile/python
 
 MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
+# Update ubuntu
+RUN sudo apt-get update
+RUN sudo apt-get upgrade
+
 # Copy over useful files
 ADD ./config /root
 ADD ./scripts /root/scripts

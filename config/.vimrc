@@ -30,3 +30,6 @@ autocmd Filetype coffeescript setlocal ts=2 sts=2 sw=2
 
 map fj <Esc>
 map! fj <Esc>
+
+set laststatus=2
+let g:airline_powerline_fonts=1
