@@ -5,7 +5,7 @@
 #
 
 # Include base image
-FROM dockerfile/brew
+FROM zephraph/brew
 
 MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
