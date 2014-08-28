@@ -11,7 +11,7 @@ MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
 # Update ubuntu
 RUN sudo apt-get update
-RUN sudo apt-get upgrade
+RUN sudo apt-get upgrade -y
 
 # Copy over useful files
 ADD ./config /root
