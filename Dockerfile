@@ -5,7 +5,7 @@
 #
 
 # Include base image
-FROM dockerfile/python
+FROM dockerfile/brew
 
 MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
