@@ -8,7 +8,6 @@ call vundle#begin()
 " Vundle Plugins
 Plugin 'gmarik/Vundle.vim'
 Plugin 'L9'
-Plugin 'bling/vim-airline'
 Plugin 'elzr/vim-json'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-surround'
@@ -24,12 +23,9 @@ set sw=4
 set sts=4
 set expandtab
 
-autocmd Filetype xml setlocal ts=2 sts=2 sw=2
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype coffeescript setlocal ts=2 sts=2 sw=2
+autocmd Filetype xml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype coffeescript setlocal ts=2 sts=2 sw=2 expandtab
 
 map fj <Esc>
 map! fj <Esc>
-
-set laststatus=2
-let g:airline_powerline_fonts=1
