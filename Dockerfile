@@ -31,8 +31,5 @@ RUN sudo apt-get install -y git curl
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall
 
-# Ensure bashrc is sourced
-RUN source ~/.bashrc
-
 # Start tmux in color mode
 CMD ["tmux", "-2"]
