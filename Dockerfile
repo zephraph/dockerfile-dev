@@ -40,7 +40,7 @@ RUN mkdir -p ~/.vim/bundle && \
 RUN sudo dpkg --add-architecture i386
 RUN sudo apt-get update
 RUN sudo apt-get install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386
-RUN sudo apt-get install openjdk-6-jdk
+RUN sudo apt-get install -y openjdk-6-jdk
 
 # Install Android SDK
 RUN cd /usr/local/ && curl -L -O http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz && tar xf android-sdk_r23.0.2-linux.tgz
