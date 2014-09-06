@@ -5,7 +5,7 @@
 #
 
 # Include base image
-FROM zephraph/brew
+FROM zephraph/brew:ionic
 
 MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
