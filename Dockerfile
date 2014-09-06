@@ -34,5 +34,37 @@ RUN mkdir -p ~/.vim/bundle && \
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && \
     vim +PluginInstall +qall
 
+# =============== ANDROID SETUP =================
+
+# Install Android Depdendencies
+RUN sudo dpkg --add-architecture i386
+RUN sudo apt-get update
+RUN sudo apt-get install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386
+RUN sudo apt-get install openjdk-6-jdk
+
+# Install Android SDK
+RUN cd /usr/local/ && curl -L -O http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz && tar xf android-sdk_r23.0.2-linux.tgz
+
+# Install Android Tools
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tools --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter platform-tools --no-ui --force -a
+
+# Install ANT
+RUN cd /usr/local && curl -L -O http://apache.petsads.us//ant/binaries/apache-ant-1.9.4-bin.tar.gz && tar xf apache-ant-1.9.4-bin.tar.gz
+
+# Environment variables
+ENV ANDROID_HOME /usr/local/android-sdk-linux
+ENV ANT_HOME /usr/local/apache-ant-1.9.4
+ENV PATH $PATH:$ANDROID_HOME/tools
+ENV PATH $PATH:$ANDROID_HOME/platform-tools
+ENV PATH $PATH:$ANT_HOME/bin
+
+# Clean up
+RUN rm -rf /usr/local/android*.tgz
+RUN rm -rf /usr/local/android*.bz2
+RUN rm -rf /usr/local/apache-ant*.tar.gz
+
+# ===============================================
+
 # Start tmux in color mode
 CMD ["tmux", "-2"]
