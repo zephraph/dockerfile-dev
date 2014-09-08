@@ -48,6 +48,7 @@ RUN cd /usr/local/ && curl -L -O http://dl.google.com/android/android-sdk_r23.0.
 # Install Android Tools
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tools --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter platform-tools --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-19 --no-ui --force -a
 
 # Install ANT
 RUN cd /usr/local && curl -L -O http://apache.petsads.us//ant/binaries/apache-ant-1.9.4-bin.tar.gz && tar xf apache-ant-1.9.4-bin.tar.gz
