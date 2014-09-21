@@ -31,5 +31,12 @@ RUN sudo apt-get install -y git curl
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall
 
+# Setup colorized
+RUN wget --no-check-certificate https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-dark ~/
+RUN mv ~/dircolors.ansi-dark ~/.dircolors
+RUN eval `dircolors ~/.dircolors`
+RUN git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git /tmp
+RUN /tmp/gnome-terminal-colors-solarized/set_dark.sh
+
 # Start tmux in color mode
 CMD ["tmux", "-2"]

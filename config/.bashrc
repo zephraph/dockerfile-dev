@@ -57,4 +57,4 @@ source ~/scripts/git-completion.sh
 source ~/scripts/z.sh
 
 # Set terminal color to 256
-export TERM=xterm-256color
+export TERM='xterm-256color'
