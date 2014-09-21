@@ -25,7 +25,8 @@ set expandtab
 
 autocmd Filetype xml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype coffeescript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 map fj <Esc>
 map! fj <Esc>
