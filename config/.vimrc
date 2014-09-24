@@ -13,14 +13,12 @@ Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()         
 filetype plugin indent on
 " ===============================
 syntax on
 set bg=dark
-colorscheme solarized
 
 set ts=4
 set sw=4
