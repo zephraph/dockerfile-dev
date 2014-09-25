@@ -13,6 +13,7 @@ Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()         
 filetype plugin indent on
