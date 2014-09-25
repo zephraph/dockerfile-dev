@@ -17,13 +17,14 @@ RUN sudo apt-get update && \
 ADD ./config /root
 ADD ./scripts /root/scripts
 
-# Install tmux
+# Configure TMUX
 ENV TMUX_MAJOR_VERSION 1.9
 ENV TMUX_MINOR_VERSION a
-RUN ~/scripts/install_tmux.sh
 
-# Install vim
-RUN sudo apt-get install -y vim
+# Install Software
+RUN ~/scripts/install_tmux.sh && \
+    sudo apt-get install -y vim && \
+    sudo apt-get install tree
 
 # Setup vundle
 RUN mkdir -p ~/.vim/bundle && \
