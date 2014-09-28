@@ -31,6 +31,10 @@ alias less='less -R'
 alias os='lsb_release -a'
 alias vi='vim'
 
+clone() {
+    git clone https://github.com/$1.git
+}
+
 # Colorize directory listing
 alias ls="ls -ph --color=auto"
 
