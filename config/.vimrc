@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()         
 filetype plugin indent on
