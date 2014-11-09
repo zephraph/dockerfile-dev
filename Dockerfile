@@ -35,7 +35,7 @@ RUN mkdir -p ~/.vim/bundle && \
     vim +PluginInstall +qall
 
 # Install meteor
-curl https://install.meteor.com/ | sh
+RUN curl https://install.meteor.com/ | sh
 
 # Start tmux in color mode
 CMD ["tmux", "-2"]
