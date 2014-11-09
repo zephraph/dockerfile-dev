@@ -5,7 +5,7 @@
 #
 
 # Include base image
-FROM dockerfile/python
+FROM dockerfile/nodejs
 
 MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
@@ -33,6 +33,9 @@ RUN mkdir -p ~/.vim/bundle && \
     sudo apt-get install -y git curl && \
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && \
     vim +PluginInstall +qall
+
+# Install meteor
+curl https://install.meteor.com/ | sh
 
 # Start tmux in color mode
 CMD ["tmux", "-2"]
