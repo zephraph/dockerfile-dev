@@ -26,6 +26,7 @@ ENV TMUX_MINOR_VERSION a
 RUN ~/scripts/install_tmux.sh && \
     sudo apt-get install -y vim && \
     sudo apt-get install tree && \
+    npm install -g coffee-script && \
     wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/
 
 # Setup vundle
