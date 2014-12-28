@@ -25,8 +25,7 @@ ENV TMUX_MINOR_VERSION a
 RUN ~/scripts/install_tmux.sh && \
     sudo apt-get install -y vim && \
     sudo apt-get install tree && \
-    git clone https://github.com/zephraph/vimrc ~/ && \
-    rm -rf ~/.git
+    wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/
 
 # Setup vundle
 RUN mkdir -p ~/.vim/bundle && \
