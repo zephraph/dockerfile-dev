@@ -27,13 +27,8 @@ RUN ~/scripts/install_tmux.sh && \
     sudo apt-get install -y vim && \
     sudo apt-get install tree && \
     npm install -g coffee-script mocha bower stylus && \
-<<<<<<< HEAD
-    wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/
-=======
     npm install -g cordova ionic phonegap && \
-    git clone https://github.com/zephraph/vimrc ~/ && \
-    rm -rf ~/.git
->>>>>>> Removed a lot of run steps.
+    wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/
 
 # Setup vundle
 RUN mkdir -p ~/.vim/bundle && \
