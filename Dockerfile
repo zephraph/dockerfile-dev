@@ -26,6 +26,11 @@ ENV TMUX_MINOR_VERSION a
 RUN ~/scripts/install_tmux.sh && \
     sudo apt-get install -y vim && \
     sudo apt-get install tree && \
+    git clone https://github.com/rust-lang/rust.git && \
+    cd rust && \
+    ./configure && \
+    make && make install && \
+    cd ../ && rm -rf rust && \
     wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/
 
 # Setup vundle
