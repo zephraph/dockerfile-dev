@@ -27,7 +27,13 @@ RUN ~/scripts/install_tmux.sh && \
     sudo apt-get install -y vim && \
     sudo apt-get install tree && \
     npm install -g coffee-script mocha bower stylus && \
+<<<<<<< HEAD
     wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/
+=======
+    npm install -g cordova ionic phonegap && \
+    git clone https://github.com/zephraph/vimrc ~/ && \
+    rm -rf ~/.git
+>>>>>>> Removed a lot of run steps.
 
 # Setup vundle
 RUN mkdir -p ~/.vim/bundle && \
@@ -38,18 +44,18 @@ RUN mkdir -p ~/.vim/bundle && \
 # =============== ANDROID SETUP =================
 
 # Install Android Depdendencies
-RUN sudo dpkg --add-architecture i386
-RUN sudo apt-get update
-RUN sudo apt-get install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386
-RUN sudo apt-get install -y openjdk-6-jdk
+RUN sudo dpkg --add-architecture i386 && \
+    sudo apt-get update && \
+    sudo apt-get install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386 && \
+    sudo apt-get install -y openjdk-6-jdk
 
 # Install Android SDK
 RUN cd /usr/local/ && curl -L -O http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz && tar xf android-sdk_r23.0.2-linux.tgz
 
 # Install Android Tools
-RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tools --no-ui --force -a
-RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter platform-tools --no-ui --force -a
-RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-19 --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tools --no-ui --force -a && \
+    echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter platform-tools --no-ui --force -a && \
+    echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter android-19 --no-ui --force -a
 
 # Install ANT
 RUN cd /usr/local && curl -L -O http://apache.petsads.us//ant/binaries/apache-ant-1.9.4-bin.tar.gz && tar xf apache-ant-1.9.4-bin.tar.gz
@@ -62,9 +68,9 @@ ENV PATH $PATH:$ANDROID_HOME/platform-tools
 ENV PATH $PATH:$ANT_HOME/bin
 
 # Clean up
-RUN rm -rf /usr/local/android*.tgz
-RUN rm -rf /usr/local/android*.bz2
-RUN rm -rf /usr/local/apache-ant*.tar.gz
+RUN rm -rf /usr/local/android*.tgz && \
+    rm -rf /usr/local/android*.bz2 && \
+    rm -rf /usr/local/apache-ant*.tar.gz 
 
 # ===============================================
 
