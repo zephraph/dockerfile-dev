@@ -5,7 +5,7 @@
 #
 
 # Include base image
-FROM dockerfile/python
+FROM dockerfile/ruby
 
 MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
@@ -26,7 +26,8 @@ ENV TMUX_MINOR_VERSION a
 RUN ~/scripts/install_tmux.sh && \
     sudo apt-get install -y vim && \
     sudo apt-get install tree && \
-    wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/
+    wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/ && \
+    get install bundler
 
 # Setup vundle
 RUN mkdir -p ~/.vim/bundle && \
