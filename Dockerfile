@@ -11,7 +11,8 @@ MAINTAINER Justin Bennett <jtbnnt@gmail.com>
 
 # Update ubuntu
 RUN sudo apt-get update && \ 
-    sudo apt-get upgrade -y
+    sudo apt-get upgrade -y && \
+    adduser zephraph
 
 # Copy over useful files
 ADD ./config /root
