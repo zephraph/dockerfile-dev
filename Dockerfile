@@ -14,9 +14,12 @@ RUN sudo apt-get update && \
     sudo apt-get upgrade -y && \
     adduser zephraph
 
+# Specify user
+USER zephraph
+
 # Copy over useful files
-ADD ./config /root
-ADD ./scripts /root/scripts
+ADD ./config /home/zephraph
+ADD ./scripts /home/zephraph/scripts
 
 # Configure TMUX
 ENV TMUX_MAJOR_VERSION 1.9
