@@ -27,6 +27,7 @@ RUN ~/scripts/install_tmux.sh && \
     sudo apt-get install -y vim && \
     sudo apt-get install tree && \
     wget -N https://raw.githubusercontent.com/zephraph/vimrc/master/.vimrc -P ~/ && \
+    sudo apt-get install nodejs -y && \
     gem install bundler && \
     gem install jekyll
 
